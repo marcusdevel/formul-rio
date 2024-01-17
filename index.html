@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+<style>
 
+.prohibited{
+    color: red;
+}
+
+
+</style>
 
 </head>
 
@@ -16,14 +23,16 @@
         <form>
             <fieldset class="first-part">
                 <legend class="personal-data">Dados pessoais</legend>
-                <label for="nome">Nome:</label>
+                <label for="nome">Nome:<span class="prohibited">*</span></label>
                 <input type="text" id="nome" name="nome" required><br>
+                
                 <label for="endereco">Endereço:</label>
                 <input type="text" id="endereco" name="endereco"><br>
                 <label for="cidade">Cidade:</label>
                 <input type="text" id="cidade" name="cidade"><br>
-                <label for="estado">Estado:</label>
+                <label for="estado">Estado:<span class="prohibited">*</span></label>
                 <select id="estado" name="estado" required>
+                    <option value="" disabled selected hidden>Escolha</option>
                     <option value="ALAGOAS">AL</option>
                     <option value="BAHIA">BA</option>
                     <option value="CEARÁ">CE</option>
@@ -40,38 +49,38 @@
             <fieldset class="second-part">
                 <legend class="professional-data">Dados profissionais</legend>
 
-                <label for="cargo">Natureza do cargo:</label><br>
+                <label for="cargo">Natureza do cargo:<span class="prohibited">*</span></label><br>
                 <label>
-                    <input type="radio" name="setor" value="Gerência">Gerência
+                    <input type="radio" name="setor" value="Gerência" required>Gerência
                 </label>
                 <label>
-                    <input type="radio" name="setor" value="Financeiro">Financeiro
+                    <input type="radio" name="setor" value="Financeiro" required>Financeiro
                 </label>
                 <label>
-                    <input type="radio" name="setor" value="Recepção">Recepção
+                    <input type="radio" name="setor" value="Recepção" required>Recepção
                 </label>
                 <label>
-                    <input type="radio" name="setor" value="Administrativo">Administrativo
+                    <input type="radio" name="setor" value="Administrativo" required>Administrativo
                 </label>
                 <label>
-                    <input type="radio" name="setor" value="Jurídico">Jurídico
+                    <input type="radio" name="setor" value="Jurídico" required>Jurídico
                 </label><br>
 
-                <label for="interesse">Área de interesse:</label><br>
-                <input type="checkbox" id="computacao" name="interesse" value="Computação">
+                <label for="interesse">Área de interesse:<span class="prohibited">*</span></label><br>
+                <input type="checkbox" id="computacao" name="interesse" value="Computação" >
                 <label for="computacao">Computação</label>
-                <input type="checkbox" id="biologia" name="interesse" value="Biologia">
+                <input type="checkbox" id="biologia" name="interesse" value="Biologia" >
                 <label for="biologia">Biologia</label>
-                <input type="checkbox" id="meio_ambiente" name="interesse" value="Meio Ambiente">
+                <input type="checkbox" id="meio_ambiente" name="interesse" value="Meio Ambiente" >
                 <label for="meio_ambiente">Meio Ambiente</label>
-                <input type="checkbox" id="engenharia" name="interesse" value="Engenharia">
+                <input type="checkbox" id="engenharia" name="interesse" value="Engenharia" >
                 <label for="engenharia">Engenharia</label>
-                <input type="checkbox" id="historia" name="interesse" value="História">
+                <input type="checkbox" id="historia" name="interesse" value="História" >
                 <label for="historia">História</label><br>
 
-                <label for="curriculo">Mini-currículo:</label>
+                <label for="curriculo">Mini-currículo:<span class="prohibited">*</span></label>
                 <textarea id="curriculo" name="curriculo" cols="20" rows="10" minlength="10"
-                    maxlength="300"></textarea><br>
+                    maxlength="300" required></textarea><br>
 
                 <input type="submit" value="Enviar">
                 <input type="reset" value="Limpar">
