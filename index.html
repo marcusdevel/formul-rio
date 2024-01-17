@@ -5,14 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
-<style>
+    <style>
+        .prohibited {
+            color: red;
+        }
 
-.prohibited{
-    color: red;
-}
+        textarea {
+            resize: none;
+        }
 
+        * {
+            margin: 0;
+            padding: 0;
+        }
 
-</style>
+        .first-part {
+            width: 570px;
+            margin: 10px;
+        }
+
+        .second-part {
+            width: 570px;
+            margin: 10px;
+        }
+
+        .personal-data {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .professional-data {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        .box-one-margins{
+            line-height: 25px;
+        }
+        .box-one {
+            height: 110px;
+        }
+
+        .box-two {
+            height: 260px;
+        }
+        .box-two-margins{
+            line-height: 25px;
+        }
+        .box-one,
+        .box-two,
+        h1 {
+            margin-left: 20px;
+
+        }
+
+        #curriculo {
+            margin-top: 20px;
+        }
+    </style>
 
 </head>
 
@@ -23,67 +72,72 @@
         <form>
             <fieldset class="first-part">
                 <legend class="personal-data">Dados pessoais</legend>
-                <label for="nome">Nome:<span class="prohibited">*</span></label>
-                <input type="text" id="nome" name="nome" required><br>
-                
-                <label for="endereco">Endereço:</label>
-                <input type="text" id="endereco" name="endereco"><br>
-                <label for="cidade">Cidade:</label>
-                <input type="text" id="cidade" name="cidade"><br>
-                <label for="estado">Estado:<span class="prohibited">*</span></label>
-                <select id="estado" name="estado" required>
-                    <option value="" disabled selected hidden>Escolha</option>
-                    <option value="ALAGOAS">AL</option>
-                    <option value="BAHIA">BA</option>
-                    <option value="CEARÁ">CE</option>
-                    <option value="MARANHÃO">MA</option>
-                    <option value="PARAÍBA">PB</option>
-                    <option value="PERNAMBUCO">PE</option>
-                    <option value="PIAUÍ">PI</option>
-                    <option value="RIOGRANDEDONORTE">RN</option>
-                    <option value="SERGIPE">SE</option>
-                </select><br>
+                <div class="box-one">
+                    <div class="box-one-margins">
+                        <label for="nome">Nome:<span class="prohibited">*</span></label>
+                        <input type="text" id="nome" name="nome" required><br>
 
+                        <label for="endereco">Endereço:</label>
+                        <input type="text" id="endereco" name="endereco"><br>
+                        <label for="cidade">Cidade:</label>
+                        <input type="text" id="cidade" name="cidade"><br>
+                        <label for="estado">Estado:<span class="prohibited">*</span></label>
+                        <select id="estado" name="estado" required>
+                            <option value="" disabled selected hidden>Escolha</option>
+                            <option value="ALAGOAS">AL</option>
+                            <option value="BAHIA">BA</option>
+                            <option value="CEARÁ">CE</option>
+                            <option value="MARANHÃO">MA</option>
+                            <option value="PARAÍBA">PB</option>
+                            <option value="PERNAMBUCO">PE</option>
+                            <option value="PIAUÍ">PI</option>
+                            <option value="RIOGRANDEDONORTE">RN</option>
+                            <option value="SERGIPE">SE</option>
+                        </select><br>
+                    </div>
+                </div>
             </fieldset>
 
             <fieldset class="second-part">
                 <legend class="professional-data">Dados profissionais</legend>
+                <div class="box-two">
+                    <div class="box-two-margins">
+                    <label for="cargo">Natureza do cargo:<span class="prohibited">*</span></label><br>
+                    <label>
+                        <input type="radio" name="setor" value="Gerência" required>Gerência
+                    </label>
+                    <label>
+                        <input type="radio" name="setor" value="Financeiro" required>Financeiro
+                    </label>
+                    <label>
+                        <input type="radio" name="setor" value="Recepção" required>Recepção
+                    </label>
+                    <label>
+                        <input type="radio" name="setor" value="Administrativo" required>Administrativo
+                    </label>
+                    <label>
+                        <input type="radio" name="setor" value="Jurídico" required>Jurídico
+                    </label><br>
 
-                <label for="cargo">Natureza do cargo:<span class="prohibited">*</span></label><br>
-                <label>
-                    <input type="radio" name="setor" value="Gerência" required>Gerência
-                </label>
-                <label>
-                    <input type="radio" name="setor" value="Financeiro" required>Financeiro
-                </label>
-                <label>
-                    <input type="radio" name="setor" value="Recepção" required>Recepção
-                </label>
-                <label>
-                    <input type="radio" name="setor" value="Administrativo" required>Administrativo
-                </label>
-                <label>
-                    <input type="radio" name="setor" value="Jurídico" required>Jurídico
-                </label><br>
+                    <label for="interesse">Área de interesse:<span class="prohibited">*</span></label><br>
+                    <input type="checkbox" id="computacao" name="interesse" value="Computação">
+                    <label for="computacao">Computação</label>
+                    <input type="checkbox" id="biologia" name="interesse" value="Biologia">
+                    <label for="biologia">Biologia</label>
+                    <input type="checkbox" id="meio_ambiente" name="interesse" value="Meio Ambiente">
+                    <label for="meio_ambiente">Meio Ambiente</label>
+                    <input type="checkbox" id="engenharia" name="interesse" value="Engenharia">
+                    <label for="engenharia">Engenharia</label>
+                    <input type="checkbox" id="historia" name="interesse" value="História">
+                    <label for="historia">História</label><br>
 
-                <label for="interesse">Área de interesse:<span class="prohibited">*</span></label><br>
-                <input type="checkbox" id="computacao" name="interesse" value="Computação" >
-                <label for="computacao">Computação</label>
-                <input type="checkbox" id="biologia" name="interesse" value="Biologia" >
-                <label for="biologia">Biologia</label>
-                <input type="checkbox" id="meio_ambiente" name="interesse" value="Meio Ambiente" >
-                <label for="meio_ambiente">Meio Ambiente</label>
-                <input type="checkbox" id="engenharia" name="interesse" value="Engenharia" >
-                <label for="engenharia">Engenharia</label>
-                <input type="checkbox" id="historia" name="interesse" value="História" >
-                <label for="historia">História</label><br>
+                    <label for="curriculo">Mini-currículo:<span class="prohibited">*</span></label>
+                    <textarea id="curriculo" name="curriculo" cols="40" rows="5" minlength="10" maxlength="300"
+                        required></textarea><br>
 
-                <label for="curriculo">Mini-currículo:<span class="prohibited">*</span></label>
-                <textarea id="curriculo" name="curriculo" cols="20" rows="10" minlength="10"
-                    maxlength="300" required></textarea><br>
-
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </div>
             </fieldset>
         </form>
     </div>
